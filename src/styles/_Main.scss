@@ -1,0 +1,43 @@
+main{
+    max-width: 480px;
+}
+
+.section--one, .section--two, .section--three{
+    padding: 1.5em 1em;
+}
+.section--two{
+    background-color: var(--grey4);
+    article{
+        display: grid;
+        grid-template: repeat(1, 1fr);
+
+        p{
+            background-color: var(--grey3);
+            color: var(--cont1);
+            border-radius:50px;
+            padding-left: 1em;
+            font-size: 1rem;
+        }
+    }
+
+    .body{
+        max-width: 290px;
+    }
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(1, 300px);
+    background-color: var(--grey3);
+    padding: 1em;
+    gap: 1rem;
+
+    article{
+        background-color: #ffffff;
+        padding: 0.8em;
+        @include box-shadow-4;
+        h3{
+            margin: 0;
+        }
+    }
+}

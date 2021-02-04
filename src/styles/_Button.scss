@@ -1,0 +1,46 @@
+.primary{
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+    appearance: none;
+    border: none;
+    background-color: var(--cont1);
+    color: var(--grey1);
+    cursor: pointer;
+    line-height:1.3;
+      display: inline-block;
+     
+ 
+}
+.primary-variant-2 {
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+    appearance: none;
+    border: none;
+       background-color: var(--dark1);
+       color: var(--grey1);
+          cursor: pointer;
+           line-height:1.3;
+             display: inline-block;
+
+}
+.secondary-variant-1 {
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+    appearance: none;
+    border: 1px solid var(--cont1);
+    background-color:unset;
+    color: var(--cont1);
+       cursor: pointer;
+        line-height:1.3;
+        display: inline-block;
+
+}

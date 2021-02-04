@@ -1,0 +1,31 @@
+nav{
+    max-width: 480px;
+    padding: 1em;
+    background-color: var(--dark1);
+    @include flex-1;
+    justify-content: space-between;
+}
+.logo--section{
+    @include flex-1;
+    h1{
+        margin: 0;
+    }
+
+    img{
+        width: 36px;
+        height: 36px;
+        object-fit: cover;
+        margin-right: 0.5em;
+    }
+}
+
+.desktop--nav{
+    display: none;
+}
+
+#navigation--button{
+    appearance: none;
+    border: none;
+    cursor: pointer;
+background-color: unset;
+}
