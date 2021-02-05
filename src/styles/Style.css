@@ -989,4 +989,135 @@ main {
 .about--header h1 {
   max-width: 328px;
 }
+
+.form--overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 480px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  z-index: 14000;
+}
+
+form {
+  background-color: #fff;
+  padding: 1em;
+  max-width: 375px;
+  width: 100%;
+  opacity: 0;
+}
+
+form h3 {
+  margin: 0;
+  padding: 1em;
+}
+
+form article {
+  padding: 1em;
+}
+
+.form--control {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: repeat 1, 1fr;
+      grid-template-columns: repeat 1, 1fr;
+  gap: 10px;
+}
+
+.form--control input {
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: 1px solid rgba(0, 0, 0, 0.3);
+  height: 30px;
+  padding-left: 1em;
+}
+
+.form--control input:focus {
+  outline: 2px solid var(--cont1);
+}
+
+textarea {
+  height: 100px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  outline: 1px solid rgba(0, 0, 0, 0.3);
+  resize: none;
+}
+
+textarea:focus {
+  outline: 2px solid var(--cont1);
+}
+
+#fileUpload {
+  padding: 0.5em;
+  font-size: 0.8rem;
+}
+
+#submit {
+  width: 100%;
+}
+
+.grow {
+  -webkit-animation: grow 0.4s ease-in-out 0.2s forwards;
+          animation: grow 0.4s ease-in-out 0.2s forwards;
+}
+
+.grow article {
+  -webkit-animation: opa 0.4s ease-in-out 0.4s forwards;
+          animation: opa 0.4s ease-in-out 0.4s forwards;
+}
+
+@-webkit-keyframes grow {
+  0% {
+    opacity: 0;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes grow {
+  0% {
+    opacity: 0;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes opa {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opa {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*# sourceMappingURL=Style.css.map */
