@@ -6,7 +6,8 @@ main {
 .section--two,
 .section--three,
 .section--four,
-.section--five {
+.section--five,
+.about--section {
     padding: 1.5em 1em;
 }
 
@@ -84,9 +85,9 @@ main {
 }
 .gallery{
     background-color: var(--grey4);
-    h3{
+ 
         padding: 1em;
-    }
+  
 }
 .methods{
     display: grid;
@@ -105,5 +106,39 @@ main {
             padding: 0 1em;
         }
       
+    }
+}
+.overflow{
+    background-color: #ffffff;
+    max-width: 320px;
+    @include box-special;
+    place-self: center;
+    border-radius: 8px;
+    .video{
+        position: relative;
+        padding: 56.25% 0 0 0;
+       
+    }
+    iframe{
+          position:absolute;
+          top:0;
+          left:0;
+          width:100%;
+          height:100%;
+          border-top-left-radius: 8px;
+          border-top-right-radius:8px ;
+    }
+
+    article{
+        padding: 1em;
+    }
+}
+.about--header{
+    background-color: var(--pastel);
+    height: 320px;
+    display: grid;
+    margin-bottom: 1em;
+    h1{
+        max-width: 328px;
     }
 }
