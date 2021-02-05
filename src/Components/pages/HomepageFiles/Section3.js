@@ -1,5 +1,8 @@
 import React from 'react'
 import {Card} from './Card'
+import {Table} from './Table'
+import {data} from './data'
+import { Button } from "./Button";
 function Section3() {
     return (
       <>
@@ -13,7 +16,10 @@ function Section3() {
               shape. Some of our partners machines in Peenya are as follows.
             </p>
           </article>
-          <Card/>
+          <Card />
+          <Table data={data} />
+
+          <Button />
         </section>
       </>
     );
