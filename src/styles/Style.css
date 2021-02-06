@@ -497,6 +497,8 @@ table {
   --contHv: hsl(218, 47%, 15%);
   --cont4: hsl(218, 96%, 79%);
   --pastel: hsl(51, 100%, 79%);
+  --error:hsl(353, 86%, 52%);
+  --success:hsl(141, 49%, 53%);
 }
 
 html {
@@ -575,8 +577,17 @@ figcaption {
   text-transform: uppercase;
 }
 
-small, .text_small {
+small, .text--small {
   font-size: 0.8rem;
+  color: var(--error);
+}
+
+.error {
+  outline: 1px solid var(--error);
+}
+
+.success {
+  outline: 1px solid var(--success);
 }
 
 html {
@@ -1000,11 +1011,12 @@ main {
   background-color: rgba(0, 0, 0, 0.5);
   display: -ms-grid;
   display: grid;
-  place-items: center;
+  justify-items: center;
   z-index: 14000;
 }
 
 form {
+  margin: 1em 0;
   background-color: #fff;
   padding: 1em;
   max-width: 375px;
@@ -1014,11 +1026,17 @@ form {
 
 form h3 {
   margin: 0;
-  padding: 1em;
+  padding: 0 16px;
+}
+
+form p {
+  padding: 0 16px;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
 }
 
 form article {
-  padding: 1em;
+  padding: 0.8em;
 }
 
 .form--control {
@@ -1029,7 +1047,7 @@ form article {
   gap: 10px;
 }
 
-.form--control input {
+input {
   width: 100%;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -1040,7 +1058,7 @@ form article {
   padding-left: 1em;
 }
 
-.form--control input:focus {
+input:focus {
   outline: 2px solid var(--cont1);
 }
 

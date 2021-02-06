@@ -61,4 +61,16 @@ figcaption{
   margin: 1em;
   text-transform: uppercase;
 }
-small, .text_small {font-size: 0.8rem;}
+small, .text--small {
+  font-size: 0.8rem;
+  color: var(--error);
+}
+
+.error{
+  outline:1px solid var(--error);
+
+}
+
+.success{
+  outline: 1px solid var(--success);
+}
