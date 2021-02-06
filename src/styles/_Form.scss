@@ -1,4 +1,4 @@
-.form--overlay{
+.form--overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -6,96 +6,110 @@
     bottom: 0;
     max-width: 480px;
     background-color: rgba($color: #000000, $alpha: 0.5);
-    display: grid;
-   justify-items: center;
+
     z-index: 14000;
+    display: grid;
+    justify-items: center;
+    grid-auto-rows: min-content 600px;
 }
-form{
+
+form {
     margin: 1em 0;
     background-color: #fff;
     padding: 1em;
     max-width: 375px;
-     width: 100%;
-     opacity: 0;
-     h3{
-         margin: 0;
-         padding:0 16px;
-     }
-     p{
-         padding:0 16px;
-         font-size: 0.8rem;
-         letter-spacing: 0.04em;
-     }
+    width: 100%;
+    opacity: 0;
 
-    article{
+    h3 {
+        margin: 0;
+        padding: 0 16px;
+    }
+
+    p {
+        padding: 0 16px;
+        font-size: 0.8rem;
+        letter-spacing: 0.04em;
+    }
+
+    article {
         padding: 0.8em;
     }
-  
-   
+
+
 }
-  .form--control {
-      display: grid;
-      grid-template-columns: repeat (1, 1fr);
-      gap: 10px;
-      
-      
-  }
-  input {
-      width: 100%;
-      appearance: none;
-      border: none;
-      outline: 1px solid rgba($color: #000000, $alpha: 0.3);
-      height: 30px;
-      padding-left: 1em;
 
-      &:focus {
-          outline: 2px solid var(--cont1);
-      }
-  }
-  textarea{
-      height: 100px;
-      appearance: none;
-      border: none;
-         outline: 1px solid rgba($color: #000000, $alpha: 0.3);
-          resize: none;
-            &:focus {
-                outline: 2px solid var(--cont1);
-            }
-  }
-  #fileUpload{
-      padding: 0.5em;
-      font-size: 0.8rem;
-  }
-  #submit{
-      width: 100%;
-  }
-  .grow {
-      animation: grow 0.4s ease-in-out 0.2s forwards;
+.form--control {
+    display: grid;
+    grid-template-columns: repeat (1, 1fr);
+    gap: 10px;
 
-    
-      article {
-          animation: opa 0.4s ease-in-out 0.4s forwards
-      }
-  }
-  @keyframes grow {
-      0% {
-          opacity: 0;
-          transform: scaleY(0);
-      }
 
-      100% {
-          transform: scaleY(1);
-          opacity: 1;
-      }
-  }
-  @keyframes opa {
-      0% {
-          opacity: 0;
+}
 
-      }
+input {
+    width: 100%;
+    appearance: none;
+    border: none;
+    outline: 1px solid rgba($color: #000000, $alpha: 0.3);
+    height: 30px;
+    padding-left: 1em;
 
-      100% {
+    &:focus {
+        outline: 2px solid var(--cont1);
+    }
+}
 
-          opacity: 1;
-      }
-  }
+textarea {
+    height: 100px;
+    appearance: none;
+    border: none;
+    outline: 1px solid rgba($color: #000000, $alpha: 0.3);
+    resize: none;
+
+    &:focus {
+        outline: 2px solid var(--cont1);
+    }
+}
+
+#fileUpload {
+    padding: 0.5em;
+    font-size: 0.8rem;
+}
+
+#submit {
+    width: 100%;
+}
+
+.grow {
+    animation: grow 0.4s ease-in-out 0.2s forwards;
+
+
+    article {
+        animation: opa 0.4s ease-in-out 0.4s forwards
+    }
+}
+
+@keyframes grow {
+    0% {
+        opacity: 0;
+        transform: scaleY(0);
+    }
+
+    100% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+@keyframes opa {
+    0% {
+        opacity: 0;
+
+    }
+
+    100% {
+
+        opacity: 1;
+    }
+}
