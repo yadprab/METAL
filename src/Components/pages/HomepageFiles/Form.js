@@ -16,6 +16,8 @@ function FormComp({ state }) {
     email: "",
     comments: "",
     files: "",
+    "bot-field": "",
+    "form-name": "contact",
   };
 
   return (
@@ -41,6 +43,8 @@ function FormComp({ state }) {
                 onSubmit={formik.handleSubmit}
               >
                 <input type="hidden" name="form-name" value="contact" />
+                <Field type="hidden" name="bot-field" />
+                <Field type="hidden" name="form-name" />
                 <h3 className="sub">Contact us</h3>
                 <p>
                   <small className="text--small">*</small>
