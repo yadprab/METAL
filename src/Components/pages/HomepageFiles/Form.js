@@ -19,16 +19,38 @@ function FormComp({ state }) {
     "bot-field": "",
     "form-name": "contact",
   };
+  const encode = (data) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&')
+}
+
+const onSubmit = (values, { setSubmitting })=>{
+  const options = {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: encode({
+      "form-name": "contact",
+      ...values,
+    }),
+  };
+  fetch('/', options).then(()=>{
+    alert('success')
+    setSubmitting(false)
+    state(false)
+
+  }).catch(()=>{
+     alert("Error: Please Try Again!");
+     setSubmitting(false);
+  })
+
+}
 
   return (
     <>
       <section className="form--overlay">
         <Formik
-          onSubmit={(values, actions) => {
-            
-            actions.resetForm();
-           
-          }}
+          onSubmit={onSubmit}
           validationSchema={validationSchema}
           initialValues={initialValues}
         >
