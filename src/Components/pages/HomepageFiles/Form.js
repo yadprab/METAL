@@ -36,7 +36,7 @@ function FormComp({ state }) {
                 noValidate
                 name="contact"
                 className="grow"
-                method="POST"
+                method="post"
                 action="/contact"
                 onSubmit={formik.handleSubmit}
               >
