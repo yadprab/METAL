@@ -35,9 +35,11 @@ function FormComp({state}) {
             <Form
               noValidate
               data-netlify-recaptcha="true"
-               name='contact'
+              name="contact"
               className="grow"
               method="POST"
+              data-netlify='true'
+              action="/contact"
               onSubmit={formik.handleSubmit}
             >
               <input type="hidden" name="form-name" value="contact" />
