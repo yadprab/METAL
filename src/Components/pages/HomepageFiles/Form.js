@@ -2,8 +2,8 @@ import React from "react";
 import { Form, Formik, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 
-function FormComp() {
-  const validationSchema = yup.object({
+function FormComp({state}) {
+  const validationSchema = yup.object().shape({
     name: yup.string().required(" name is required"),
     email: yup
       .string()
@@ -15,27 +15,32 @@ function FormComp() {
     name: "",
     email: "",
     comments: "",
+    files:'',
   };
 
   return (
     <>
       <section className="form--overlay">
         <Formik
-          onSubmit={({ setSubmitting }) => {
-            setSubmitting(false);
+          onSubmit={(values, actions) => {
+            actions.setSubmitting(false);
+            actions.resetForm();
+            setTimeout(()=>{  state(false)},1000)
           }}
           validationSchema={validationSchema}
           initialValues={initialValues}
         >
-          {({ isSubmitting }) => {
+          {(formik) => {
           return (
-               <Form
+            <Form
               noValidate
               data-netlify-recaptcha="true"
-              data-netlify="true"
+               name='contact'
               className="grow"
               method="POST"
+              onSubmit={formik.handleSubmit}
             >
+              <input type="hidden" name="form-name" value="contact" />
               <h3 className="sub">Contact us</h3>
               <p>
                 <small className="text--small">*</small>
@@ -45,14 +50,28 @@ function FormComp() {
                 <label htmlFor="name" className="body">
                   Name <small className="text--small">*</small>
                 </label>
-                <Field type="text" name="name" id="name" />
+                <Field
+                  type="text"
+                  name="name"
+                  id="name"
+                  className={
+                    formik.touched.name && formik.errors.name ? "error" : ""
+                  }
+                />
                 <ErrorMessage name="name" component="small" />
               </article>
               <article className="form--control">
                 <label htmlFor="email" className="body">
                   email <small className="text--small">*</small>
                 </label>
-                <Field type="email" name="email" id="email" />
+                <Field
+                  type="email"
+                  name="email"
+                  id="email"
+                  className={
+                    formik.touched.email && formik.errors.email ? "error" : ""
+                  }
+                />
                 <ErrorMessage name="email" component="small" />
               </article>
               <article className="form--control">
@@ -62,7 +81,7 @@ function FormComp() {
                 <Field as="textarea" name="comments" id="comments"></Field>
               </article>
               <article className="file--upload">
-                <input type="file" name="file" id="file" hidden />
+                <Field type="file" name="file" id="file" hidden />
                 <button
                   id="fileUpload"
                   className="secondary-variant-2"
@@ -73,17 +92,12 @@ function FormComp() {
               </article>
 
               <article className="submit">
-                <button
-                  type="submit"
-                  className="primary-variant-2"
-                  id="submit"
-                  disabled={isSubmitting}
-                >
+                <button type="submit" className="primary-variant-2" id="submit">
                   submit
                 </button>
               </article>
             </Form>
-          )
+          );
          
           }}
         </Formik>

@@ -10,7 +10,7 @@ function Button() {
         <button id="section--contact" className="secondary-variant-1" onClick={()=>{setState(true)}}>
           Contact us
         </button>
-        {state&& <FormComp/>}
+        {state? <FormComp state={setState}/>:null}
       </>
     );
 }
