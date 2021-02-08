@@ -1,7 +1,8 @@
-import React from "react";
+import React,{ useState }from "react";
 import { Form, Formik, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
-
+import {CloseButton} from './CloseButton';
+import {FileUpload} from './FileUpload'
 function FormComp({ state }) {
   const validationSchema = yup.object().shape({
     name: yup.string().required(" name is required"),
@@ -11,44 +12,49 @@ function FormComp({ state }) {
       .required("email is required"),
   });
 
+ const [file, setFile] = useState()
   const initialValues = {
     name: "",
     email: "",
     comments: "",
-    files: "",
+    files: file?file:'',
     "bot-field": "",
     "form-name": "contact",
   };
   const encode = (data) => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
-}
-
-const onSubmit = (values, { setSubmitting })=>{
-  const options = {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: encode({
-      "form-name": "contact",
-      ...values,
-    }),
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
   };
-  fetch('/', options).then(()=>{
-    alert('success')
-    setSubmitting(false)
-    state(false)
 
-  }).catch(()=>{
-     alert("Error: Please Try Again!");
-     setSubmitting(false);
-  })
-
-}
+  const onSubmit = (values, { setSubmitting }) => {
+    console.log(values);
+    const options = {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": "contact",
+        ...values,
+      }),
+    };
+    fetch("/", options)
+      .then(() => {
+        alert("success");
+        setSubmitting(false);
+        state(false);
+      })
+      .catch(() => {
+        alert("Error: Please Try Again!");
+        setSubmitting(false);
+      });
+  };
 
   return (
     <>
       <section className="form--overlay">
+      
         <Formik
           onSubmit={onSubmit}
           validationSchema={validationSchema}
@@ -106,16 +112,7 @@ const onSubmit = (values, { setSubmitting })=>{
                   </label>
                   <Field as="textarea" name="comments" id="comments"></Field>
                 </article>
-                <article className="file--upload">
-                  <Field type="file" name="file" id="file" hidden />
-                  <button
-                    id="fileUpload"
-                    className="secondary-variant-2"
-                    type="file"
-                  >
-                    upload files here
-                  </button>
-                </article>
+               <FileUpload  value={formik.values.files} file={file} setFile={setFile}/>
 
                 <article className="submit">
                   <button
@@ -126,6 +123,7 @@ const onSubmit = (values, { setSubmitting })=>{
                     submit
                   </button>
                 </article>
+                <CloseButton state={state} />
               </Form>
             );
           }}

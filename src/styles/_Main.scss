@@ -1,5 +1,6 @@
 main {
     max-width: 480px;
+    margin: 78px 0;
 }
 
 .section--one,
@@ -7,7 +8,8 @@ main {
 .section--three,
 .section--four,
 .section--five,
-.about--section {
+.about--section,
+.team--section {
     padding: 1.5em 1em;
 }
 
@@ -108,39 +110,24 @@ main {
       
     }
 }
-.overflow{
-    background-color: #ffffff;
-    max-width: 320px;
-    @include box-special;
-    place-self: center;
-    border-radius: 8px;
-    .video{
-        position: relative;
-        padding: 56.25% 0 0 0;
-       
+.teams{
+    display: grid;
+    grid-template-columns: repeat (1,1fr );
+    place-content: center;
+    gap: 1rem;
+    background-color: var(--grey4);
+
+    figure{
+        @include flex-1;
     }
-    iframe{
-          position:absolute;
-          top:0;
-          left:0;
-          width:100%;
-          height:100%;
-          border-top-left-radius: 8px;
-          border-top-right-radius:8px ;
+    .sub{
+        margin:  0;
+        text-align: center
+    }
+    .body{
+          text-align: center;
     }
 
-    article{
-        padding: 1em;
-    }
-}
-.about--header{
-    background-color: var(--pastel);
-    height: 320px;
-    display: grid;
-    margin-bottom: 1em;
-    h1{
-        max-width: 328px;
-    }
-}
+  }
 
 @import './Form';

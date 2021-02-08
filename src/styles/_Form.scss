@@ -13,6 +13,7 @@
     grid-auto-rows: min-content 600px;
 }
 
+
 form {
     margin: 1em 0;
     background-color: #fff;
@@ -20,6 +21,8 @@ form {
     max-width: 375px;
     width: 100%;
     opacity: 0;
+    @include box-special;
+    position: relative;
 
     h3 {
         margin: 0;
@@ -45,6 +48,15 @@ form {
     gap: 10px;
 
 
+}
+#close--button{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    appearance: none;
+    border: none;
+    background-color: unset;
+    cursor: pointer;
 }
 
 input {
@@ -79,6 +91,9 @@ textarea {
 
 #submit {
     width: 100%;
+}
+#file{
+    display: none;
 }
 
 .grow {

@@ -2,6 +2,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import {Homepage} from './Components/pages/Homepage'
 import { AboutUs } from "./Components/pages/Aboutus";
 import './styles/Style.css'
+
 function App() {
   return (
     <>
@@ -11,6 +12,7 @@ function App() {
           <Route exact path="/about" component={AboutUs} />
         </Switch>
       </BrowserRouter>
+   
     </>
   );
 }

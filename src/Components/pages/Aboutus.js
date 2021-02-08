@@ -5,9 +5,7 @@ function AboutUs() {
     <>
     <Nav/>
       <header className="about--header">
-        <article>
-          <h1>Why metalripper?</h1>
-        </article>
+      
 
         <section className="overflow">
           <div>

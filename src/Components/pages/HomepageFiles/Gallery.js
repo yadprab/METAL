@@ -4,7 +4,7 @@ function Gallery() {
     return (
       <>
         <section className="gallery">
-          <h3>QA methods</h3>
+       
 
           <article className="methods">
             <article>
