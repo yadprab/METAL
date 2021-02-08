@@ -22,9 +22,7 @@ function FormComp({ state }) {
     "bot-field": "",
     "form-name": "contact",
   };
-  const FileObj = {
-    file
-  }
+
   const encode = (data) => {
     return Object.keys(data)
       .map(
@@ -34,15 +32,15 @@ function FormComp({ state }) {
   };
 
   const onSubmit = (values, { setSubmitting }) => {
- console.log(FileObj);
+
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": "contact",
-        
+        file,
         ...values,
-        ...FileObj,
+        
       }),
     };
     fetch("/", options)
