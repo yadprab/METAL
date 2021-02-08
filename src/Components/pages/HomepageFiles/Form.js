@@ -24,6 +24,8 @@ function FormComp({ state }) {
   };
 
   const encode = (data) => {
+    console.log(data);
+    console.log(Object.keys(data));
     return Object.keys(data)
       .map(
         (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
