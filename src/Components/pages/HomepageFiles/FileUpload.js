@@ -31,7 +31,7 @@ function FileUpload({value, file, setFile}) {
             id="file"
             onChange={handleChange}
             ref={hiddenFileInput}
-            value={value}
+           
           />
           <button
             id="fileUpload"
