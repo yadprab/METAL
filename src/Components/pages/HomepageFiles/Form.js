@@ -17,10 +17,14 @@ function FormComp({ state }) {
     name: "",
     email: "",
     comments: "",
-    files: file?file:'',
+    
+
     "bot-field": "",
     "form-name": "contact",
   };
+  const FileObj = {
+    file
+  }
   const encode = (data) => {
     return Object.keys(data)
       .map(
@@ -30,13 +34,15 @@ function FormComp({ state }) {
   };
 
   const onSubmit = (values, { setSubmitting }) => {
-    console.log(values);
+ console.log(FileObj);
     const options = {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
         "form-name": "contact",
+        
         ...values,
+        ...FileObj,
       }),
     };
     fetch("/", options)
@@ -112,7 +118,7 @@ function FormComp({ state }) {
                   </label>
                   <Field as="textarea" name="comments" id="comments"></Field>
                 </article>
-               <FileUpload  value={formik.values.files} file={file} setFile={setFile}/>
+               <FileUpload  file={file} setFile={setFile}/>
 
                 <article className="submit">
                   <button

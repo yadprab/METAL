@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 
 
-function FileUpload({value, file, setFile}) {
+function FileUpload({ file, setFile}) {
 
    
     const hiddenFileInput = useRef(null);
@@ -31,6 +31,7 @@ function FileUpload({value, file, setFile}) {
             id="file"
             onChange={handleChange}
             ref={hiddenFileInput}
+           
            
           />
           <button
