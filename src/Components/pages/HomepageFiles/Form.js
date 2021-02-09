@@ -22,15 +22,12 @@ function FormComp({ state }) {
     name: "",
     email: "",
     comments: "",
-    
-
     "bot-field": "",
     "form-name": "contact",
   };
 
   const encode = (data) => {
    
- 
     return Object.keys(data)
       .map(
         (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])

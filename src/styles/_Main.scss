@@ -1,6 +1,6 @@
 main {
     max-width: 480px;
-    margin: 78px 0;
+    margin: 58px 0;
 }
 
 .section--one,
@@ -128,6 +128,12 @@ main {
           text-align: center;
     }
 
+  }
+
+  .about--main{
+      article {
+          padding: 1em;
+      }
   }
 
 @import './Form';
