@@ -1,7 +1,7 @@
 import React from "react";
 import * as yup from "yup";
 import { Form, Formik, Field, ErrorMessage } from "formik";
-import emailjs from "emailjs-com";
+import emailjs, { sendForm } from "emailjs-com";
 function Form2() {
   const validationSchema = yup.object().shape({
     subject: yup.string().required(" subject is required"),
@@ -19,44 +19,46 @@ function Form2() {
   };
 
 
-  const onSubmit = (values, { SetSubmitting, resetForm }) => {
-    console.log(values);
-     
-   emailjs
-       .sendForm(
-         "gmail",
-         "service_spjjnnm",
-         {
-           subject:values.subject,
-           eamil:values.email,
-           bodyText:values.bodyText,
-         },
-         "user_VaRpIdfoXBJNPYKpSjX0O"
-       )
-       .then((result) => {
-         console.log(result.text);
-         SetSubmitting(false);
-         resetForm();
-       },(error) => {
-          console.log(error.text + 'no funciona');
-      })
-      
-  };
+const formSend = (e, values,{resetForm}) => {
+  e.preventDefault();
+emailjs.sendForm(
+    "gmail",
+    "service_spjjnnm",
+    values,
+   "user_VaRpIdfoXBJNPYKpSjX0O"
+  )
+  .then(
+    (result) => {
+      resetForm();
+      console.log(result.text);
+    },
+    (error) => {
+      console.log(error.text);
+    }
+  );
+
+   
+  
+}
+
+ 
 
   return (
+  
     <>
       <Formik
-        onSubmit={onSubmit}
+        onSubmit={formSend}
         validationSchema={validationSchema}
         initialValues={initialValues}
       >
         {(formik) => {
+         
           return (
             <Form
               noValidate
               className="contact--page"
-              method="post"
-              onSubmit={formik.handleSubmit}
+            
+              onSubmit={sendForm}
             >
               <h3 className="sub">we're glad this is happening</h3>
               <p>
