@@ -14,7 +14,7 @@ function About() {
               Global customers.
             </p>
           </article>
-          <Link to="/contact" className="link">Why Metalripper?</Link>
+          <Link to="/about" className="link">Why Metalripper?</Link>
         </section>
       </>
     );

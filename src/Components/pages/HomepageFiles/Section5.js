@@ -18,7 +18,7 @@ function Section5() {
             reports. We use UPS, FedEx and common carriers to ships parts all
             around the world.
           </p>
-          <Button />
+          <Button value="Contact us" clName="secondary-variant-1" />
         </article>
       </>
     );

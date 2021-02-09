@@ -50,19 +50,6 @@ form {
      text-align: center;
  }
 }
-.contact--page{
-    opacity: 1;
-    @include box-special;
-    max-width: 420px;
-    textarea{
-        height: 200px;
-        padding: 1em;
-    }
-    #submit {
-        width: 50%;
-    }
-   
-}
 
 .form--control {
     display: grid;

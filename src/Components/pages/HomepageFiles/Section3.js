@@ -19,7 +19,7 @@ function Section3() {
           <Card />
           <Table data={data} />
 
-          <Button />
+          <Button value="Contact us" clName="secondary-variant-1" />
         </section>
       </>
     );

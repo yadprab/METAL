@@ -14,7 +14,8 @@ function FormComp({ state }) {
 
   const [formState, setFormState] = useState({
     success:false,
-    error:false
+    error:false,
+    buttonVal:'submit',
   })
 
 
@@ -52,9 +53,10 @@ function FormComp({ state }) {
         
         
         setSubmitting(false);
+          setFormState({ buttonVal: 'submitting...' });
        setTimeout(() => {
          setFormState({ success: true });
-       }, 1000);
+       }, 1500);
       })
       .catch(() => {
      
@@ -129,10 +131,13 @@ function FormComp({ state }) {
                   <article className="submit">
                     <button
                       type="submit"
-                      className="primary-variant-2"
+                      disabled={ formState.buttonVal !== 'submit'?true:''}
+                      className={`primary-variant-2 ${
+                        formState.buttonVal !== 'submit'? "submitting" : ""
+                      }`}
                       id="submit"
                     >
-                      submit
+                      {formState.buttonVal}
                     </button>
                   </article>
                   <CloseButton state={state} />

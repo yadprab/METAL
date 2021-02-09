@@ -736,6 +736,10 @@ svg {
   color: var(--cont2);
 }
 
+.submitting {
+  opacity: 0.5;
+}
+
 :root {
   --alpha: 1;
   --alpha-2: 0.8;
@@ -799,6 +803,97 @@ nav {
   background-color: unset;
 }
 
+.side--nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 13000;
+  padding: 1em;
+  width: 70vw;
+}
+
+.side--nav .logo--section {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.side--nav .logo--section h1 {
+  color: var(--dark2);
+}
+
+.side--nav nav {
+  background-color: unset;
+}
+
+.side--nav nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.side--nav nav ul li {
+  margin: 1.4em 0;
+}
+
+.side--nav nav ul a {
+  color: var(--dark1);
+}
+
+.side--nav nav ul a:hover {
+  color: var(--cont1);
+}
+
+#bar-3,
+#bar-2,
+#bar-1 {
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+#bar-3-1,
+#bar-2-1,
+#bar-1-1 {
+  -webkit-transform-origin: 0%;
+          transform-origin: 0%;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+}
+
+#bar-2-1,
+#bar-2 {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+#bar-3-1,
+#bar-3 {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
 header {
   padding: 48px 16px;
   max-width: 480px;
@@ -820,25 +915,7 @@ header {
   max-width: 320px;
 }
 
-.hero--section article button {
-  -webkit-box-shadow: 0 5px 10px -5px rgba(0, 0, 0, var(--alpha-4));
-          box-shadow: 0 5px 10px -5px rgba(0, 0, 0, var(--alpha-4));
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.hero--section article button svg {
-  margin-left: 0.5em;
-}
-
-.hero--section article button:hover {
+.hero--section article #section--contact:hover {
   background-color: var(--contH);
 }
 
@@ -898,22 +975,6 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.contact--header {
-  background-image: url(../bg/formheadMob.jpg);
-  background-size: contain;
-  background-position: top;
-  background-repeat: no-repeat;
-}
-
-.contact--header .hero--text .sub {
-  font-weight: 700;
-}
-
-.contact--header .hero--text .sub,
-.contact--header .hero--text .body {
-  color: #fff;
 }
 
 main {
@@ -1119,22 +1180,6 @@ form article {
 .success-form .body {
   margin: 1em;
   text-align: center;
-}
-
-.contact--page {
-  opacity: 1;
-  -webkit-box-shadow: 0px 26px 36px -20px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 26px 36px -20px rgba(0, 0, 0, 0.4);
-  max-width: 420px;
-}
-
-.contact--page textarea {
-  height: 200px;
-  padding: 1em;
-}
-
-.contact--page #submit {
-  width: 50%;
 }
 
 .form--control {

@@ -1,11 +1,12 @@
-import React, {useLayoutEffect} from "react";
+import React, { useLayoutEffect } from "react";
 import { Nav } from "./HomepageFiles/Nav";
 import { Button } from "./HomepageFiles/Button";
 
+import { Footer } from "./Footer";
 function AboutUs() {
   useLayoutEffect(() => {
     window.scrollTo(0, 0);
-});
+  });
   return (
     <>
       <Nav />
@@ -56,9 +57,9 @@ function AboutUs() {
             There’s nothing complicated about it. Good machinist, good outcome{" "}
           </p>
         </article>
-         <Button/>
+        <Button value="Contact us" clName="secondary-variant-1" />
       </main>
-    
+      <Footer />
     </>
   );
 }

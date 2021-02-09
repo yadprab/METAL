@@ -19,13 +19,10 @@ header {
             max-width: 320px;
         }
 
-        button {
-            @include box-shadow-4;
-            @include flex-1;
+        #section--contact {
+           
 
-            svg {
-                margin-left: 0.5em;
-            }
+            
 
 
 
@@ -100,19 +97,3 @@ header {
 
 }
 
-.contact--header {
-    background-image: url(../bg/formheadMob.jpg);
-    background-size: contain;
-    background-position: top;
-    background-repeat: no-repeat;
-    .hero--text{
-        .sub{
-            font-weight: 700;
-        }
-         .sub,
-         .body {
-             color: #fff;
-         }
-    }
-    
-}

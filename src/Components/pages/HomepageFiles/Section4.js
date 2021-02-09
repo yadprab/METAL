@@ -16,7 +16,7 @@ function Section4() {
           factory floor to ensure that instructions are followed properly.
         </p>
         <Gallery />
-        <Button />
+        <Button value="Contact us" clName="secondary-variant-1" />
       </article>
     </>
   );

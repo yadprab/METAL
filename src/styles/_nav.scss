@@ -29,3 +29,64 @@ nav{
     cursor: pointer;
 background-color: unset;
 }
+.side--nav{
+   
+    position: fixed;
+    top: 0;
+    left:0 ;
+    bottom: 0;
+    background-color:#fff;
+    z-index: 13000;
+    padding: 1em;
+    width: 70vw;
+   
+    .logo--section{
+        justify-content: flex-start;
+        h1{
+            color: var(--dark2);
+        }
+    }
+    nav{
+        background-color: unset;
+
+        ul{
+            @include flex-2;
+            li{
+                margin: 1.4em 0;
+            }
+            a{
+                color: var(--dark1);
+
+                &:hover{
+                    color: var(--cont1);
+                }
+            }
+
+        }
+    }
+}
+
+#bar-3,
+#bar-2,
+#bar-1{
+    transform-origin: 0%;
+    transform: scaleX(0);
+    transition: transform 0.4s ease-in-out ;
+      
+}
+#bar-3-1,
+#bar-2-1,
+#bar-1-1 {
+    transform-origin: 0%;
+    transform: scaleX(1);
+    transition: transform 0.4s ease-in-out ;
+
+}
+#bar-2-1,
+#bar-2 {
+    transition-delay: 0.1s;
+}
+#bar-3-1,
+#bar-3 {
+    transition-delay: 0.3s;
+}
