@@ -1,7 +1,11 @@
-import React from "react";
-import {Nav}  from './HomepageFiles/Nav'
-import {Footer}  from './Footer'
+import React, {useLayoutEffect} from "react";
+import { Nav } from "./HomepageFiles/Nav";
+import { Button } from "./HomepageFiles/Button";
+
 function AboutUs() {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+});
   return (
     <>
       <Nav />
@@ -20,7 +24,7 @@ function AboutUs() {
           </div>
         </section>
       </header>
-      <main className='about--main'>
+      <main className="about--main">
         <article>
           <p className="body">
             MetalRipper is started with a rebellious spirit and lofty objective:
@@ -52,8 +56,9 @@ function AboutUs() {
             There’s nothing complicated about it. Good machinist, good outcome{" "}
           </p>
         </article>
+         <Button/>
       </main>
-      <Footer />
+    
     </>
   );
 }

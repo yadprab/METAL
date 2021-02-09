@@ -584,6 +584,7 @@ small, .text--small {
 
 .error {
   outline: 1px solid var(--error);
+  border: none;
 }
 
 .success {
@@ -630,7 +631,7 @@ svg {
 }
 
 .primary {
-  padding: 0.75em 1em;
+  padding: 0.5em 1em;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -899,6 +900,22 @@ header {
   height: 100%;
 }
 
+.contact--header {
+  background-image: url(../bg/formheadMob.jpg);
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.contact--header .hero--text .sub {
+  font-weight: 700;
+}
+
+.contact--header .hero--text .sub,
+.contact--header .hero--text .body {
+  color: #fff;
+}
+
 main {
   max-width: 480px;
   margin: 58px 0;
@@ -1049,6 +1066,10 @@ main {
   padding: 1em;
 }
 
+.about--main #section--contact {
+  margin-left: 1em;
+}
+
 .form--overlay {
   position: fixed;
   top: 0;
@@ -1100,6 +1121,22 @@ form article {
   text-align: center;
 }
 
+.contact--page {
+  opacity: 1;
+  -webkit-box-shadow: 0px 26px 36px -20px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 26px 36px -20px rgba(0, 0, 0, 0.4);
+  max-width: 420px;
+}
+
+.contact--page textarea {
+  height: 200px;
+  padding: 1em;
+}
+
+.contact--page #submit {
+  width: 50%;
+}
+
 .form--control {
   display: -ms-grid;
   display: grid;
@@ -1125,14 +1162,15 @@ input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  border: none;
-  outline: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
   height: 30px;
   padding-left: 1em;
 }
 
 input:focus {
   outline: 2px solid var(--cont1);
+  border: none;
 }
 
 textarea {
@@ -1141,12 +1179,14 @@ textarea {
      -moz-appearance: none;
           appearance: none;
   border: none;
-  outline: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
   resize: none;
 }
 
 textarea:focus {
   outline: 2px solid var(--cont1);
+  border: none;
 }
 
 #fileUpload {
