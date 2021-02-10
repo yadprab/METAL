@@ -25,11 +25,11 @@ form {
 
     h3 {
         margin: 0;
-        padding: 0 16px;
+        padding: 0 12px;
     }
 
     p {
-        padding: 0 16px;
+        padding: 0 12px;
         font-size: 0.8rem;
         letter-spacing: 0.04em;
     }
@@ -120,7 +120,10 @@ textarea {
         animation: opa 0.4s ease-in-out 0.4s forwards
     }
 }
-
+.svg{
+    padding: 0.8rem;
+    @include flex-1;
+}
 @keyframes grow {
     0% {
         opacity: 0;

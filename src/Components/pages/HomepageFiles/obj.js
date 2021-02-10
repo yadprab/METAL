@@ -1,18 +1,18 @@
 const imgObj={
     src1: '',
      src2: '',
-     main:'/images/team1.jpg'
+     main:'/images/gk2.png'
 }
  const imgObj2 = {
   src1: "",
   src2: "",
-  main: "/images/team2.jpg",
+  main: "/images/gk3.png",
 };
 
  const imgObj3 = {
   src1: "",
   src2: "",
-  main: "/images/team3.jpg",
+  main: "/images/gk4.png",
 };
 
 export const imgArr = [

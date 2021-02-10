@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import {Button} from './Button'
+
 import {CloseButton} from './CloseButton'
 function SideBar({state}) {
     return (
       <>
-        <section className="side--nav in">
+        <section className={`side--nav ${state?'in':'out'}`}>
           <section className="logo--section">
             <Link to="/">
               <img src="/images/logo.png" alt="logo" />
@@ -29,8 +29,8 @@ function SideBar({state}) {
               </li>
             </ul>
           </nav>
-          <Button value="Contact us" clName="secondary-variant-1" />
-          <CloseButton state={state}/>
+         
+          <CloseButton state={state} />
         </section>
       </>
     );

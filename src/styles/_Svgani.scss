@@ -1,0 +1,82 @@
+#e4r39wz3nvwf38_tr {
+    animation: e4r39wz3nvwf38_tr__tr 3000ms forwards infinite;
+}
+
+@keyframes e4r39wz3nvwf38_tr__tr {
+    0% {
+        transform: translate(34.278290px, 83.439453px) rotate(0deg);
+    }
+
+    100% {
+        transform:
+            translate(34.278290px, 83.439453px) rotate(360deg);
+    }
+
+}
+#e4r39wz3nvwf25_tr {
+    animation:
+        e4r39wz3nvwf25_tr__tr 3000ms infinite forwards;
+}
+
+@keyframes e4r39wz3nvwf25_tr__tr {
+    0% {
+        transform: translate(94.620115px, 49.222656px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(94.620115px, 49.222656px) rotate(360deg);
+    }
+}
+
+#tick-1-1,
+#tick-1-2,
+#tick-1-3,
+#tick-1-4{
+  path{
+        opacity: 0;
+        animation: sl 0.4s ease-in forwards;
+        transform: scale(0);
+        transform-origin: center;
+  }
+}
+#tick-1-2{
+ path{
+     animation-delay: 0.2s;
+ }
+}
+#tick-1-3 {
+    path{
+        animation-delay: 0.3s;
+        }
+    }
+#tick-1-4 {
+   path{
+        animation-delay: 0.4s;
+   }
+}
+
+
+@keyframes sl {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+       transform: scale(1);
+    }
+}
+#mail{
+    animation: send 1.5s ease-in-out alternate infinite;
+   
+}
+
+@keyframes send{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100px);
+    }
+}

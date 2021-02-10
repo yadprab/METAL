@@ -33,12 +33,20 @@ background-color: unset;
    
     position: fixed;
     top: 0;
-    left:0 ;
-    bottom: 0;
+    right:50% ;
+left: 0;
+   transform: translateX(-50%);
     background-color:#fff;
+    @include box-special;
     z-index: 13000;
-    padding: 1em;
-    width: 70vw;
+    padding: 1.5em;
+    max-width: 380px;
+    transform: scaleY(0);
+    transform-origin: top;
+    
+    border-radius: 4px;
+  
+ 
    
     .logo--section{
         justify-content: flex-start;
@@ -52,7 +60,7 @@ background-color: unset;
         ul{
             @include flex-2;
             li{
-                margin: 1.4em 0;
+                margin: 1em 0;
             }
             a{
                 color: var(--dark1);
@@ -65,7 +73,14 @@ background-color: unset;
         }
     }
 }
-
+.in{
+    animation: in 0.4s ease-in-out forwards
+ 
+}
+.out{
+    animation: out 0.4s ease-in-out forwards;
+    
+}
 #bar-3,
 #bar-2,
 #bar-1{
@@ -89,4 +104,21 @@ background-color: unset;
 #bar-3-1,
 #bar-3 {
     transition-delay: 0.3s;
+}
+@keyframes in{
+    from{
+        transform: scaleY(0);
+    }
+    to{
+        transform: scaleY(1);
+    }
+}
+@keyframes out {
+    from {
+        transform: scaleY(1);
+    }
+
+    to {
+        transform: scaleY(0);
+    }
 }

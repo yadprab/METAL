@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { Form, Formik, Field, ErrorMessage } from "formik";
 import * as yup from "yup";
 import {CloseButton} from './CloseButton';
-import {Success}from './Sucess'
+import {Success}from './Sucess';
+import {FormSvg} from './Formsvg'
 function FormComp({ state }) {
   const validationSchema = yup.object().shape({
     name: yup.string().required(" name is required"),
@@ -83,6 +84,9 @@ function FormComp({ state }) {
                   action="/contact"
                   onSubmit={formik.handleSubmit}
                 >
+                <article className='svg'>
+                   <FormSvg/>
+                </article>
                   <input type="hidden" name="form-name" value="contact" />
                   <Field type="hidden" name="bot-field" />
                   <Field type="hidden" name="form-name" />
