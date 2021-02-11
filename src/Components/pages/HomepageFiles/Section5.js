@@ -1,12 +1,12 @@
 import React from 'react'
 import { Button } from "./Button";
-import {Logi} from './Logi'
+
 function Section5() {
     return (
       <>
         <article className="section--five">
           <h3>Logistics</h3>
-          <Logi />
+   
           <p className="body">
             When parts are machined, they undergo processes like anodizing,
             passivation, magnaplating or powder coating as per requirements. All
