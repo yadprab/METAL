@@ -1,12 +1,10 @@
-import React, { useLayoutEffect } from "react";
+import React from "react";
 import { Nav } from "./HomepageFiles/Nav";
 import { Button } from "./HomepageFiles/Button";
 
 import { Footer } from "./Footer";
 function AboutUs() {
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-  });
+
   return (
     <>
       <Nav />

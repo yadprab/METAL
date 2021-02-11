@@ -1,0 +1,73 @@
+.floating--section {
+    position: fixed;
+    top: 70%;
+    right: 2%;
+    z-index: 13000;
+}
+
+.links--float {
+    right: 100%;
+    top: -50%;
+    position: absolute;
+    @include box-special;
+    background-color: #fff;
+    padding: 0.8em;
+    border-radius: 4px;
+     transform: scaleX(0);
+     transition: transform 0.4s cubic-bezier(0.61, 1, 0.88, 1);
+     will-change: transform;
+     opacity: 0;
+     transform-origin: 100%;
+     animation: float 0.4s cubic-bezier(0.61, 1, 0.88, 1) forwards;
+
+    &::after{
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background-color: pink;
+        right: -5px;
+        z-index: -1;
+        bottom: calc(50% - 10px);
+        transform: rotate(45deg);
+        background-color: #fff;
+       
+    }
+   
+    a{
+         color: var(--cont1);
+         text-decoration: underline;
+    }
+}
+
+.float--icon {
+    padding: 0.8em;
+    @include svg-button;
+    background-color:var(--base);
+    border-radius: 50%;
+    @include box-special;
+    @include flex-1;
+    cursor: pointer;
+    position: relative;
+
+    &:hover{
+        background-color: var(--shade);
+    }
+
+
+
+    svg{
+        fill: #fff;
+    }
+}
+
+@keyframes float{
+    0%{
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}

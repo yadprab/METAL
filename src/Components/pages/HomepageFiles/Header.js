@@ -1,6 +1,6 @@
 import React from 'react'
 import {Button} from './Button'
-
+import {Svg} from './Svg'
 const Header=()=> {
     return (
       <>
@@ -17,7 +17,7 @@ const Header=()=> {
               
             </article>
             <section className="hero--img">
-      
+            <Svg img="/images/g13.svg" alt='business illustration'/>      
          
             </section>
           </section>

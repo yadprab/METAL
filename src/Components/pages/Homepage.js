@@ -3,6 +3,7 @@ import {Nav} from './HomepageFiles/Nav';
 import {Header} from './HomepageFiles/Header'
 import { Main } from "./HomepageFiles/Main";
 import {Footer} from './Footer'
+import {Floating} from './Floating'
 const Homepage=()=> {
     return (
       <>
@@ -10,6 +11,7 @@ const Homepage=()=> {
         <Header />
         <Main />
         <Footer />
+        <Floating />
       </>
     );
 }

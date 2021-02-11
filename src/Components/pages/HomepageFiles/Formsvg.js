@@ -9,6 +9,7 @@ function FormSvg() {
           viewBox="0 0 80 47"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          id='form-svg'
         >
           <g id="#532_sending_emails_outline">
             <g id="Group 21">

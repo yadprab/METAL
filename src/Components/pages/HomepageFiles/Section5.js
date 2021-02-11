@@ -1,12 +1,12 @@
 import React from 'react'
 import { Button } from "./Button";
-
+import { Svg } from "./Svg";
 function Section5() {
     return (
       <>
         <article className="section--five">
           <h3>Logistics</h3>
-   
+           <Svg img='/images/logi.svg' alt='logistics illustrations'/>
           <p className="body">
             When parts are machined, they undergo processes like anodizing,
             passivation, magnaplating or powder coating as per requirements. All
