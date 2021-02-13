@@ -11,8 +11,12 @@ main {
 .about--section,
 .team--section,
 .card--section,
-.table--section {
+.table--section,
+.error--page {
     padding: 1.5em 1em;
+}
+.error-page{
+    max-width:480px;
 }
 
 .section--two {
