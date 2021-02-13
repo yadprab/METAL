@@ -9,7 +9,9 @@ main {
 .section--four,
 .section--five,
 .about--section,
-.team--section {
+.team--section,
+.card--section,
+.table--section {
     padding: 1.5em 1em;
 }
 
@@ -32,6 +34,14 @@ main {
     .body {
         max-width: 290px;
     }
+}
+.figure {
+    margin: 1.5em 0;
+    padding: 0.8em;
+    background-color: var(--grey4);
+}
+.Illustration{
+    margin-top: 2.5em;
 }
 
 .cards {

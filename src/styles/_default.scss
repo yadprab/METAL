@@ -37,7 +37,7 @@ a {
     text-decoration: none;
 }
 
-svg:not(#form-svg) {
+svg:not(#form-svg):not(#mail--to) {
 
     width: 24px;
     height: 24px;

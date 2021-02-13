@@ -566,7 +566,7 @@ h5 {
   line-height: 24px;
   font-weight: 400;
   color: var(--dark4);
-  max-width: 328px;
+  max-width: 45ch;
 }
 
 figcaption {
@@ -626,14 +626,14 @@ a {
   text-decoration: none;
 }
 
-svg:not(#form-svg) {
+svg:not(#form-svg):not(#mail--to) {
   width: 24px;
   height: 24px;
   pointer-events: none;
 }
 
 .primary {
-  padding: 0.5em 1em;
+  padding: 0.75em 1em;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -646,7 +646,7 @@ svg:not(#form-svg) {
   color: #fff;
   font-weight: 500;
   cursor: pointer;
-  line-height: 1.3;
+  line-height: 1.5;
   display: inline-block;
 }
 
@@ -972,12 +972,44 @@ header {
   gap: 1rem;
 }
 
+.hero--section .hero--text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .hero--section article h1 {
   max-width: 220px;
 }
 
 .hero--section article h2 {
   max-width: 320px;
+}
+
+.hero--section article #section--contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.hero--section article #section--contact svg {
+  margin-left: 4px;
+  vertical-align: middle;
+  fill: #ffffff;
+  width: 19px;
+  height: 19px;
 }
 
 .hero--section article #section--contact:hover {
@@ -1032,7 +1064,9 @@ main {
 .section--four,
 .section--five,
 .about--section,
-.team--section {
+.team--section,
+.card--section,
+.table--section {
   padding: 1.5em 1em;
 }
 
@@ -1056,6 +1090,16 @@ main {
 
 .section--two .body {
   max-width: 290px;
+}
+
+.figure {
+  margin: 1.5em 0;
+  padding: 0.8em;
+  background-color: var(--grey4);
+}
+
+.Illustration {
+  margin-top: 2.5em;
 }
 
 .cards {
@@ -1534,7 +1578,7 @@ textarea:focus {
 
 .links--float {
   right: 100%;
-  top: -50%;
+  top: 0%;
   position: absolute;
   -webkit-box-shadow: 0px 26px 36px -20px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 26px 36px -20px rgba(0, 0, 0, 0.4);
@@ -1551,6 +1595,7 @@ textarea:focus {
   opacity: 0;
   -webkit-transform-origin: 100%;
           transform-origin: 100%;
+  width: 150px;
   -webkit-animation: float 0.4s cubic-bezier(0.61, 1, 0.88, 1) forwards;
           animation: float 0.4s cubic-bezier(0.61, 1, 0.88, 1) forwards;
 }
@@ -1575,30 +1620,22 @@ textarea:focus {
 }
 
 .float--icon {
-  padding: 0.8em;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   border: none;
-  background-color: var(--base);
+  background-color: unset;
   border-radius: 50%;
   -webkit-box-shadow: 0px 26px 36px -20px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 26px 36px -20px rgba(0, 0, 0, 0.4);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
   position: relative;
 }
 
 .float--icon:hover {
-  background-color: var(--shade);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .float--icon svg {
