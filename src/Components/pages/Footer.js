@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from "react-router-dom";
+import {LinkSvg} from './LinkSvg';
 function Footer() {
     return (
       <>
         <footer>
-          <section className='top--one'>
+          <section className="top--one">
             <section className="logo--section">
               <Link to="/">
                 <img src="/images/logo.png" alt="logo" />
@@ -17,7 +18,7 @@ function Footer() {
 
             <h2 className="body">Your Indian Machining Partner</h2>
           </section>
-          <article>
+          <article className='mail--links'>
             <h3 className="sub">New Business</h3>
             <a
               href="mailto:contact@metalripper.com"
@@ -43,7 +44,7 @@ function Footer() {
               TN 637 403-India.
             </p>
           </article>
-          <article>
+          <article className='social--media'>
             <h3 className="sub">Social Media</h3>
             <a
               href="https://www.linkedin.com/in/machine-boy"
@@ -54,6 +55,7 @@ function Footer() {
               id="https://www.linkedin.com/in/machine-boy"
             >
               Linked in
+              <LinkSvg />
             </a>
             <a
               className="body"
@@ -64,6 +66,7 @@ function Footer() {
               id="https://www.linkedin.com/in/machine-boy"
             >
               facebook
+              <LinkSvg />
             </a>
             <a
               className="body"
@@ -74,6 +77,7 @@ function Footer() {
               id="https://www.linkedin.com/in/machine-boy"
             >
               instagram
+              <LinkSvg />
             </a>
             <a
               className="body"
@@ -84,6 +88,7 @@ function Footer() {
               id="https://www.linkedin.com/in/machine-boy"
             >
               Youtube
+              <LinkSvg />
             </a>
           </article>
 

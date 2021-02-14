@@ -5,7 +5,7 @@ function Table({ data }) {
     <>
       <section className="table">
         <h3>Materials</h3>
-        {data.map &&
+        {data &&
           data.map((d) => {
             return (
               <article key={d.id}>

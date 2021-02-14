@@ -1,0 +1,41 @@
+.article--header{
+    @include flex-1;
+}
+.article--main{
+    padding-left:1em;
+    padding-right: 1em;
+    display: grid;
+    grid-template-columns: repeat(1, 320px);
+    gap: 1.5rem;
+    place-content: center;
+}
+.article--section{
+    background-color: #fff;
+    @include box-shadow-4;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    article{
+        padding: 0 1em;
+        .sub{
+            margin-top: 1em;
+            font-weight: 700;
+        }
+    }
+    .bottom--article{
+        padding: 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a{
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--link);
+            font-weight: 500;
+            line-height: 1rem;
+        }
+
+        small{
+            color: rgba($color: #000000, $alpha: 0.57);
+        }
+    }
+}

@@ -37,9 +37,10 @@ a {
     text-decoration: none;
 }
 
-svg:not(#form-svg):not(#mail--to) {
+svg:not(#form-svg):not(#mail--to):not(#link--svg) {
 
     width: 24px;
     height: 24px;
     pointer-events: none;
 }
+
