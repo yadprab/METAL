@@ -39,10 +39,31 @@ footer{
        }
     }
 }
-.mail--links{
+.mail--links {
     a{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 10px;
     }
+}
+.attribution{
+  a{
+      display: grid;
+      grid-template-columns: 1fr 15px;
+      width: 200px;
+      &:nth-of-type(2){
+          width: 170px;
+      }
+
+  }
+
+  div{
+      a{
+          width: 100px;
+          gap: 8px;
+            &:nth-of-type(2) {
+                width: 100px;
+            }
+      }
+  }
 }

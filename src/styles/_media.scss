@@ -1,0 +1,156 @@
+@media screen and(min-width:481px){
+    nav{
+        max-width: 768px;
+    }
+    header{
+        max-width: 768px;
+      padding: 76px 1.5em;
+
+        .hero--section{
+          
+            grid-template-columns:1fr 1fr ;
+            align-items: center;
+           
+        }
+       
+    }
+    main{
+          max-width: 768px;
+    }
+    .section--one,
+    .section--two,
+    .section--three,
+    .section--four,
+    .section--five,
+    .about--section,
+    .team--section,
+    .card--section,
+    .table--section,
+    .error--page{
+        padding: 3em 1.5em;
+    }
+    footer{
+        max-width: 768px;
+    }
+
+    .section--one,
+    .section--five,
+    .about--section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 1rem;
+
+        
+    }
+    .section--two{
+        article{
+            grid-template-columns: repeat(2, 230px);
+            gap: 1rem;
+           
+        }
+    } 
+    .figure{
+        width: 539px;
+    }
+    .cards,.methods{
+        grid-template-columns: repeat(2, 300px);
+       
+        
+    }
+    .about--header{
+        background-size: cover;
+        .overflow{
+             margin: auto;
+             top: 80%;
+             left: 50%;
+             transform: translate(-50%, -50%);
+             max-width: 500px;
+             width: 100%;
+        }
+    }
+
+    .about--main{
+        display: grid;
+        place-content: center;
+    }
+    .form--overlay{
+        max-width: inherit;
+    }
+    .article--main{
+        grid-template-columns: repeat(2,300px);
+    }
+    footer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+    }
+}
+@media screen and(min-width:769px) {
+    nav {
+        max-width: 900px;
+    }
+
+    header {
+        max-width: 900px;
+    }
+
+    main {
+        max-width: 900px;
+    }
+
+    footer {
+        max-width: 900px;
+    }
+}
+@media screen and(min-width:901px) {
+    nav {
+        max-width: 1024px;
+    }
+
+    header {
+        max-width: 1024px;
+    }
+
+    main {
+        max-width: 1024px;
+    }
+
+    footer {
+        max-width: 1024px;
+    }
+}
+@media screen and(min-width:1025px) {
+    nav {
+        max-width:1100px
+    }
+
+    header {
+        max-width:1100px
+    }
+
+    main {
+        max-width:1100px
+    }
+
+    footer {
+        max-width:1100px
+    }
+}
+@media screen and(min-width:1101px) {
+    nav {
+        max-width: 1440px;
+    }
+
+    header {
+        max-width: 1440px;
+    }
+
+    main {
+        max-width: 1440px;
+    }
+
+    footer {
+        max-width: 1440px;
+    }
+}

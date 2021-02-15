@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 import {LinkSvg} from './LinkSvg';
+import {Attribution} from './Attribution';
 function Footer() {
     return (
       <>
@@ -91,6 +92,7 @@ function Footer() {
               <LinkSvg />
             </a>
           </article>
+          <Attribution/>
 
           <article>
             <p>© 2021 Metalripper</p>

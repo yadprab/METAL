@@ -1099,18 +1099,15 @@ main {
   max-width: 336px;
 }
 
-.section--two {
-  background-color: var(--grey4);
-}
-
 .section--two article {
   display: -ms-grid;
   display: grid;
-  grid-template: repeat(1, 1fr);
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
 }
 
 .section--two article p {
-  background-color: var(--grey3);
+  background-color: var(--grey4);
   color: var(--cont1);
   border-radius: 50px;
   padding-left: 1em;
@@ -1118,7 +1115,7 @@ main {
 }
 
 .section--two .body {
-  max-width: 290px;
+  margin-top: 1em;
 }
 
 .figure {
@@ -1136,7 +1133,7 @@ main {
   display: grid;
   -ms-grid-columns: (300px)[1];
       grid-template-columns: repeat(1, 300px);
-  background-color: var(--grey3);
+  background-color: var(--grey4);
   padding: 1em;
   gap: 1rem;
   place-content: center;
@@ -1212,11 +1209,10 @@ main {
 .teams {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: repeat 1, 1fr;
-      grid-template-columns: repeat 1, 1fr;
+  -ms-grid-columns: (300px)[1];
+      grid-template-columns: repeat(1, 300px);
   place-content: center;
   gap: 1rem;
-  background-color: var(--grey4);
 }
 
 .teams figure {
@@ -1815,5 +1811,176 @@ footer .social--media a {
   -ms-grid-columns: (1fr)[1];
       grid-template-columns: repeat(1, 1fr);
   gap: 10px;
+}
+
+.attribution a {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 15px;
+      grid-template-columns: 1fr 15px;
+  width: 200px;
+}
+
+.attribution a:nth-of-type(2) {
+  width: 170px;
+}
+
+.attribution div a {
+  width: 100px;
+  gap: 8px;
+}
+
+.attribution div a:nth-of-type(2) {
+  width: 100px;
+}
+
+@media screen and (min-width: 481px) {
+  nav {
+    max-width: 768px;
+  }
+  header {
+    max-width: 768px;
+    padding: 76px 1.5em;
+  }
+  header .hero--section {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main {
+    max-width: 768px;
+  }
+  .section--one,
+  .section--two,
+  .section--three,
+  .section--four,
+  .section--five,
+  .about--section,
+  .team--section,
+  .card--section,
+  .table--section,
+  .error--page {
+    padding: 3em 1.5em;
+  }
+  footer {
+    max-width: 768px;
+  }
+  .section--one,
+  .section--five,
+  .about--section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem;
+  }
+  .section--two article {
+    -ms-grid-columns: (230px)[2];
+        grid-template-columns: repeat(2, 230px);
+    gap: 1rem;
+  }
+  .figure {
+    width: 539px;
+  }
+  .cards, .methods {
+    -ms-grid-columns: (300px)[2];
+        grid-template-columns: repeat(2, 300px);
+  }
+  .about--header {
+    background-size: cover;
+  }
+  .about--header .overflow {
+    margin: auto;
+    top: 80%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    max-width: 500px;
+    width: 100%;
+  }
+  .about--main {
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+  }
+  .form--overlay {
+    max-width: inherit;
+  }
+  .article--main {
+    -ms-grid-columns: (300px)[2];
+        grid-template-columns: repeat(2, 300px);
+  }
+  footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  nav {
+    max-width: 900px;
+  }
+  header {
+    max-width: 900px;
+  }
+  main {
+    max-width: 900px;
+  }
+  footer {
+    max-width: 900px;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  nav {
+    max-width: 1024px;
+  }
+  header {
+    max-width: 1024px;
+  }
+  main {
+    max-width: 1024px;
+  }
+  footer {
+    max-width: 1024px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  nav {
+    max-width: 1100px;
+  }
+  header {
+    max-width: 1100px;
+  }
+  main {
+    max-width: 1100px;
+  }
+  footer {
+    max-width: 1100px;
+  }
+}
+
+@media screen and (min-width: 1101px) {
+  nav {
+    max-width: 1440px;
+  }
+  header {
+    max-width: 1440px;
+  }
+  main {
+    max-width: 1440px;
+  }
+  footer {
+    max-width: 1440px;
+  }
 }
 /*# sourceMappingURL=Style.css.map */

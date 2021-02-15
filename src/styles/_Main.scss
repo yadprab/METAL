@@ -43,14 +43,14 @@ h1, .sub{
 }
 
 .section--two {
-    background-color: var(--grey4);
+   
 
     article {
         display: grid;
-        grid-template: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 1fr);
 
         p {
-            background-color: var(--grey3);
+            background-color: var(--grey4);
             color: var(--cont1);
             border-radius: 50px;
             padding-left: 1em;
@@ -59,13 +59,14 @@ h1, .sub{
     }
 
     .body {
-        max-width: 290px;
+       margin-top: 1em;
     }
 }
 .figure {
     margin: 1.5em 0;
     padding: 0.8em;
     background-color: var(--grey4);
+
 }
 .Illustration{
     margin-top: 2.5em;
@@ -74,7 +75,7 @@ h1, .sub{
 .cards {
     display: grid;
     grid-template-columns: repeat(1, 300px);
-    background-color: var(--grey3);
+    background-color: var(--grey4);
     padding: 1em;
     gap: 1rem;
     place-content: center;
@@ -149,10 +150,10 @@ h1, .sub{
 }
 .teams{
     display: grid;
-    grid-template-columns: repeat (1,1fr );
+    grid-template-columns: repeat(1, 300px );
     place-content: center;
     gap: 1rem;
-    background-color: var(--grey4);
+
 
     figure{
         @include flex-1;
