@@ -5,15 +5,17 @@ function Table({ data }) {
     <>
       <section className="table">
         <h3>Materials</h3>
-        {data &&
-          data.map((d) => {
-            return (
-              <article key={d.id}>
-                <p className="body">{d.material}</p>
-                <p className="body type">{d.type}</p>
-              </article>
-            );
-          })}
+        <article className='materials--table'>
+          {data &&
+            data.map((d) => {
+              return (
+                <article key={d.id}>
+                  <p className="body">{d.material}</p>
+                  <p className="body type">{d.type}</p>
+                </article>
+              );
+            })}
+        </article>
       </section>
     </>
   );

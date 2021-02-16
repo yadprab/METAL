@@ -5,7 +5,7 @@ function About() {
     const IlluStration = {
       img: "/images/Aboutus.svg",
       alt: "team--illustration",
-      srcM: "",
+      srcM: "/images/team2.svg",
       scr1: "",
       src2: "",
     };

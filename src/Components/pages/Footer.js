@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import {LinkSvg} from './LinkSvg';
 import {Attribution} from './Attribution';
+import { Attribution2 } from "./Attribution2";
 function Footer() {
     return (
       <>
@@ -19,7 +20,7 @@ function Footer() {
 
             <h2 className="body">Your Indian Machining Partner</h2>
           </section>
-          <article className='mail--links'>
+          <article className="mail--links">
             <h3 className="sub">New Business</h3>
             <a
               href="mailto:contact@metalripper.com"
@@ -45,7 +46,7 @@ function Footer() {
               TN 637 403-India.
             </p>
           </article>
-          <article className='social--media'>
+          <article className="social--media">
             <h3 className="sub">Social Media</h3>
             <a
               href="https://www.linkedin.com/in/machine-boy"
@@ -92,9 +93,9 @@ function Footer() {
               <LinkSvg />
             </a>
           </article>
-          <Attribution/>
-
-          <article>
+          <Attribution />
+          <Attribution2 />
+          <article className='copy'>
             <p>© 2021 Metalripper</p>
           </article>
         </footer>

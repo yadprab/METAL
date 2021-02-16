@@ -4,7 +4,7 @@ function Section1() {
 const IlluStration ={
   img:'/images/who.svg',
   alt:'team--illustration',
-  srcM:'',
+  srcM:'/images/who2.svg',
   scr1:'',
   src2:'',
 }

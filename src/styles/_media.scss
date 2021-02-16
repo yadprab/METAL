@@ -9,7 +9,7 @@
         .hero--section{
           
             grid-template-columns:1fr 1fr ;
-            align-items: center;
+          
            
         }
        
@@ -40,6 +40,7 @@
         grid-template-columns: 1fr 1fr;
         align-items: center;
         gap: 1rem;
+      
 
         
     }
@@ -119,6 +120,36 @@
     footer {
         max-width: 1024px;
     }
+    .hero--section {
+        article{ 
+        h1{
+        max-width: 16ch;
+    }}}
+
+    .section--two{
+        @include flex-2;
+    }
+    .section--three,
+    .section--four {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 1rem;
+    }
+    .cards,.methods,.teams{
+        grid-template-columns: repeat(3,300px);
+    }
+    .table{
+        h3{
+            text-align: center;
+        }
+    }
+     .materials--table{
+         display: grid;
+         grid-template-columns: repeat(2,300px);
+         gap: 1rem;
+         place-content: center;
+     }
+    
 }
 @media screen and(min-width:1025px) {
     nav {
@@ -140,17 +171,103 @@
 @media screen and(min-width:1101px) {
     nav {
         max-width: 1440px;
+        .button--section{
+            display: none;
+        }
+
+        .desktop--nav{
+            @include ul;
+            a{
+                @include links;
+                color: var(--grey4);
+            }
+        }
     }
 
     header {
         max-width: 1440px;
+        padding: 120px 48px;
     }
 
     main {
         max-width: 1440px;
+        margin: 120px 0;
+     
     }
 
     footer {
         max-width: 1440px;
+    }
+     .section--one,
+     .section--two,
+     .section--three,
+     .section--four,
+     .section--five,
+     .about--section,
+     .team--section,
+     .card--section,
+     .table--section,
+     .error--page {
+         padding: 4.5em 3em;
+     }
+     .section--one{
+        
+        figure{
+             justify-self: end;
+        }
+     }
+     .section--five{
+         .Illustration {
+              justify-self: end;
+         }
+     }
+       .about--section {
+           .about--content{
+               order: 2;
+               justify-self: center;
+           }
+           .Illustration {
+               justify-self: start;
+               order: 1;
+           }
+       }
+     .section--four{
+         .section--four--article{
+             order: 2;
+         }
+     }
+     footer{
+         grid-template-columns: repeat(3, 1fr);
+     }
+      .copy {
+         
+          grid-column: 1/4;
+      }
+
+      .about--header{
+          .overflow{
+              max-width: 600px;
+          }
+      }
+      .article--main{
+          grid-template-columns: repeat(3,300px);
+      }
+      
+}
+@media screen and(min-width:1441px) {
+    nav {
+        max-width: 100%;
+    }
+
+    header {
+      max-width: 100%;
+    }
+
+    main {
+     max-width: 100%;
+    }
+
+    footer {
+       max-width: 100%;
     }
 }

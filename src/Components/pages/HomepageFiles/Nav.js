@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { SideBar } from "./SideBar.js";
+import { Button } from "./Button";
 function Nav() {
   const [navState, setNavState] = useState(false);
 
@@ -60,7 +61,7 @@ function Nav() {
         </section>
         <ul className="desktop--nav">
           <li>
-            <Link to="/"> home</Link>
+            <Link to="/"> Home</Link>
           </li>
 
           <li>
@@ -68,6 +69,9 @@ function Nav() {
           </li>
           <li>
             <Link to="/articles"> Articles</Link>
+          </li>
+          <li>
+            <Button clName="secondary-variant-1" value="contact Form" />
           </li>
         </ul>
       </nav>

@@ -57,13 +57,21 @@ footer{
 
   }
 
-  div{
-      a{
-          width: 100px;
-          gap: 8px;
-            &:nth-of-type(2) {
-                width: 100px;
-            }
-      }
-  }
+ 
 }
+ .atb--2 {
+     a {
+         display: grid;
+         grid-template-columns: 1fr 15px;
+         width: 100px;
+         gap: 8px;
+
+         &:nth-of-type(2) {
+             width: 100px;
+         }
+     }
+ }
+ .copy {
+     padding: 1em;
+     grid-column: 1/3;
+ }

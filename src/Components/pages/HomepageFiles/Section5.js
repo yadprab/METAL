@@ -5,7 +5,7 @@ function Section5() {
   const IlluStration = {
     img: "/images/logi.svg",
     alt: "team--illustration",
-    srcM: "",
+    srcM: "/images/logi2.svg",
     scr1: "",
     src2: "",
   };

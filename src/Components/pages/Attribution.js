@@ -25,30 +25,7 @@ function Attribution() {
           stories - freepik.com
           <LinkSvg />
         </a>
-        <div>
-          Icons made by
-          <a
-            href="https://www.freepik.com"
-            title="Freepik"
-            target="_blank"
-            rel="noOpener noReferrer"
-            className="body"
-          >
-            freepik.com
-            <LinkSvg />
-          </a>
-          from
-          <a
-            href="https://www.flaticon.com/"
-            title="Flaticon"
-            target="_blank"
-            rel="noOpener noReferrer"
-            className="body"
-          >
-            flaticon.com
-            <LinkSvg />
-          </a>
-        </div>
+      
       </section>
     </>
   );
